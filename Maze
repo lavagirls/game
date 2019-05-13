@@ -1,0 +1,20 @@
+import javax.swing.JFrame;
+import java.awt.Rectangle;
+
+public class Maze 
+{
+	public static void main(String[] args)
+	{
+		JFrame mazeScreen = new JFrame();
+	
+		mazeScreen.setSize(800,600);
+		mazeScreen.setTitle("Sharkboy and Lavagirl");
+		mazeScreen.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		mazeScreen.setVisible(true);
+		
+		MazeDrawing mc = new MazeDrawing();
+		mazeScreen.add(mc);
+	}
+}
+
+
