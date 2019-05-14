@@ -196,6 +196,201 @@ public class MazeDrawing extends JComponent
 		maze.draw(line27);
 		
 		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		//right maze outline 
+				Point2D.Double point101 = new Point2D.Double(800, 200);
+				Point2D.Double point102 = new Point2D.Double(850, 200);
+				
+				//enter
+				Point2D.Double point103 = new Point2D.Double(950, 200);
+				Point2D.Double point104 = new Point2D.Double(1400,200);
+				
+				//right enter
+				Point2D.Double point105 = new Point2D.Double(1400, 200);
+				Point2D.Double point106 = new Point2D.Double(1400,800);
+				
+				//right down
+				Point2D.Double point107 = new Point2D.Double(1400, 800);
+				Point2D.Double point108 = new Point2D.Double(1000,800);
+				
+				//exit
+				Point2D.Double point109 = new Point2D.Double(900, 800);
+				Point2D.Double point110 = new Point2D.Double(800,800);
+				
+				//right exit
+				Point2D.Double point111 = new Point2D.Double(800, 800);
+				Point2D.Double point112 = new Point2D.Double(800,200);
+				
+				
+				 
+				
+				// inside maze 
+				Point2D.Double point113 = new Point2D.Double(850, 200);
+				Point2D.Double point114 = new Point2D.Double(850,375);
+				
+				Point2D.Double point115 = new Point2D.Double(850, 375);
+				Point2D.Double point116 = new Point2D.Double(1250,375);
+				
+				Point2D.Double point117 = new Point2D.Double(1250, 375);
+				Point2D.Double point118 = new Point2D.Double(1250,500);
+//				
+				
+				Point2D.Double point119 = new Point2D.Double(1000, 300);
+				Point2D.Double point120 = new Point2D.Double(1350,300);
+		
+				Point2D.Double point121 = new Point2D.Double(1150, 300);
+				Point2D.Double point122 = new Point2D.Double(1150,250);
+//
+				
+				Point2D.Double point123 = new Point2D.Double(1350, 350);
+				Point2D.Double point124 = new Point2D.Double(1350,550);
+							
+				Point2D.Double point125 = new Point2D.Double(1350, 450);
+				Point2D.Double point126 = new Point2D.Double(1400, 450);
+//
+				
+				Point2D.Double point127 = new Point2D.Double(1050, 600);
+				Point2D.Double point128 = new Point2D.Double(1400, 600);
+							
+				//Point2D.Double point129 = new Point2D.Double(1350, 600);
+				//Point2D.Double point130 = new Point2D.Double(1350, 700);
+//				
+				      
+				Point2D.Double point131 = new Point2D.Double(1150, 800);
+				Point2D.Double point132 = new Point2D.Double(1150, 750);
+				
+				Point2D.Double point133 = new Point2D.Double(1050, 750);
+				Point2D.Double point134 = new Point2D.Double(1200, 750);
+//
+				
+				Point2D.Double point135 = new Point2D.Double(900, 800);
+				Point2D.Double point136 = new Point2D.Double(900, 700);
+				
+				Point2D.Double point137 = new Point2D.Double(900, 700);
+				Point2D.Double point138 = new Point2D.Double(1300, 700);
+//
+				
+				Point2D.Double point139 = new Point2D.Double(950, 650);
+				Point2D.Double point140 = new Point2D.Double(950, 600);
+				
+				Point2D.Double point141 = new Point2D.Double(950, 600);
+				Point2D.Double point142 = new Point2D.Double(800, 600);
+//				
+				
+				Point2D.Double point143 = new Point2D.Double(850, 600);
+				Point2D.Double point144 = new Point2D.Double(850, 425);
+				
+				Point2D.Double point145 = new Point2D.Double(850, 425);
+				Point2D.Double point146 = new Point2D.Double(1175, 425);
+				
+				Point2D.Double point147 = new Point2D.Double(1175, 425);
+				Point2D.Double point148 = new Point2D.Double(1175, 475);
+//
+				Point2D.Double point149 = new Point2D.Double(900, 500);
+				Point2D.Double point150 = new Point2D.Double(1100, 500);
+		
+				Point2D.Double point151 = new Point2D.Double(1000, 500);
+				Point2D.Double point152 = new Point2D.Double(1000, 455);
+				
+
+				
+				maze.setColor(Color.BLACK);
+				
+				//left outline
+				Line2D.Double line101 = new Line2D.Double(point101, point102);
+				maze.draw(line101);
+				
+				Line2D.Double line102 = new Line2D.Double(point103, point104);
+				maze.draw(line102);
+				
+				Line2D.Double line103 = new Line2D.Double(point105, point106);
+				maze.draw(line103);
+				
+				Line2D.Double line104 = new Line2D.Double(point107, point108);
+				maze.draw(line104);
+				
+				Line2D.Double line105 = new Line2D.Double(point109, point110);
+				maze.draw(line105);
+				
+				Line2D.Double line106 = new Line2D.Double(point111, point112);
+				maze.draw(line106);
+				
+				//inside
+				Line2D.Double line107 = new Line2D.Double(point113, point114);
+				maze.draw(line107);
+				
+				Line2D.Double line108 = new Line2D.Double(point115, point116);
+				maze.draw(line108);
+				
+				Line2D.Double line109 = new Line2D.Double(point117, point118);
+				maze.draw(line109);
+				
+				Line2D.Double line110 = new Line2D.Double(point119, point120);
+				maze.draw(line110);
+				
+				Line2D.Double line111 = new Line2D.Double(point121, point122);
+				maze.draw(line111);
+				
+				Line2D.Double line112= new Line2D.Double(point123, point124);
+				maze.draw(line112);	
+
+				Line2D.Double line113 = new Line2D.Double(point125, point126);
+				maze.draw(line113);
+				
+				Line2D.Double line114= new Line2D.Double(point127, point128);
+				maze.draw(line114);
+				
+				//Line2D.Double line115 = new Line2D.Double(point129, point130);
+				//maze.draw(line115);
+				
+				Line2D.Double line116 = new Line2D.Double(point131, point132);
+				maze.draw(line116);
+				
+				Line2D.Double line117= new Line2D.Double(point133, point134);
+				maze.draw(line117);
+
+				Line2D.Double line118 = new Line2D.Double(point135, point136);
+				maze.draw(line118);
+				
+				Line2D.Double line119= new Line2D.Double(point137, point138);
+				maze.draw(line119);
+
+				Line2D.Double line120= new Line2D.Double(point139, point140);
+				maze.draw(line120);
+				
+				Line2D.Double line121= new Line2D.Double(point141, point142);
+				maze.draw(line121);
+
+				Line2D.Double line122 = new Line2D.Double(point143, point144);
+				maze.draw(line122);
+				
+				Line2D.Double line123= new Line2D.Double(point145, point146);
+				maze.draw(line123);
+				
+				Line2D.Double line124= new Line2D.Double(point147, point148);
+				maze.draw(line124);
+				
+				Line2D.Double line125= new Line2D.Double(point149, point150);
+				maze.draw(line125);
+				
+				Line2D.Double line126= new Line2D.Double(point151, point152);
+				maze.draw(line126);
+				
+		
 	}
 	
 }
