@@ -1,0 +1,368 @@
+import java.awt.Color;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
+import javax.swing.JComponent;
+import java.awt.geom.Line2D;
+import java.awt.geom.Point2D;
+
+public class Maze2Drawing extends JComponent
+{
+	public void paintComponent(Graphics g)
+	{
+		Graphics2D maze = (Graphics2D) g;
+
+		/* outline points */
+
+		// left
+		Point2D.Double point1 = new Point2D.Double(100, 100);
+		Point2D.Double point2 = new Point2D.Double(100, 800);
+
+		// right
+		Point2D.Double point3 = new Point2D.Double(800, 100);
+		Point2D.Double point4 = new Point2D.Double(800, 800);
+
+		// TOP
+		// point1
+		Point2D.Double point5 = new Point2D.Double(650, 100);
+
+		Point2D.Double point6 = new Point2D.Double(750, 100);
+		// point3
+
+		// BOTTOM
+		// point2
+		Point2D.Double point7 = new Point2D.Double(200, 800);
+
+		Point2D.Double point8 = new Point2D.Double(300, 800);
+		// point4
+
+		/* inside points */
+
+		// bottom left mass
+		Point2D.Double point9 = new Point2D.Double(200, 600);
+		Point2D.Double point10 = new Point2D.Double(200, 700);
+
+		// point10
+		Point2D.Double point11 = new Point2D.Double(700, 700);
+
+		Point2D.Double point12 = new Point2D.Double(600, 700);
+		Point2D.Double point13 = new Point2D.Double(600, 600);
+
+		Point2D.Double point14 = new Point2D.Double(400, 700);
+		Point2D.Double point15 = new Point2D.Double(400, 500);
+
+		// point15
+		Point2D.Double point16 = new Point2D.Double(100, 500);
+
+		Point2D.Double point17 = new Point2D.Double(300, 500);
+		Point2D.Double point18 = new Point2D.Double(300, 600);
+
+		Point2D.Double point19 = new Point2D.Double(200, 500);
+		Point2D.Double point20 = new Point2D.Double(200, 300);
+
+		// right mass
+		Point2D.Double point21 = new Point2D.Double(800, 200);
+		Point2D.Double point22 = new Point2D.Double(600, 200);
+
+		Point2D.Double point23 = new Point2D.Double(700, 200);
+		Point2D.Double point24 = new Point2D.Double(700, 300);
+
+		// point24
+		Point2D.Double point25 = new Point2D.Double(600, 300);
+
+		// point25
+		Point2D.Double point26 = new Point2D.Double(600, 500);
+
+		Point2D.Double point27 = new Point2D.Double(700, 500);
+		Point2D.Double point28 = new Point2D.Double(500, 500);
+
+		Point2D.Double point29 = new Point2D.Double(700, 400);
+		Point2D.Double point30 = new Point2D.Double(700, 600);
+
+		Point2D.Double point31 = new Point2D.Double(500, 600);
+		Point2D.Double point32 = new Point2D.Double(500, 400);
+
+		// point32
+		Point2D.Double point33 = new Point2D.Double(400, 400);
+
+		// point33
+		Point2D.Double point34 = new Point2D.Double(400, 300);
+
+		// top mass
+		Point2D.Double point35 = new Point2D.Double(300, 100);
+		Point2D.Double point36 = new Point2D.Double(300, 400);
+
+		Point2D.Double point37 = new Point2D.Double(300, 200);
+		Point2D.Double point38 = new Point2D.Double(200, 200);
+
+		Point2D.Double point39 = new Point2D.Double(400, 100);
+		Point2D.Double point40 = new Point2D.Double(400, 200);
+
+		Point2D.Double point41 = new Point2D.Double(500, 100);
+		Point2D.Double point42 = new Point2D.Double(500, 300);
+
+		maze.setColor(Color.BLACK);
+
+		/* outline lines */
+
+		Line2D.Double leftOutline = new Line2D.Double(point1, point2);
+		maze.draw(leftOutline);
+
+		Line2D.Double rightOutline = new Line2D.Double(point3, point4);
+		maze.draw(rightOutline);
+
+		Line2D.Double topOutline1 = new Line2D.Double(point1, point5);
+		maze.draw(topOutline1);
+
+		Line2D.Double topOutline2 = new Line2D.Double(point6, point3);
+		maze.draw(topOutline2);
+
+		Line2D.Double botOutline1 = new Line2D.Double(point2, point7);
+		maze.draw(botOutline1);
+
+		Line2D.Double botOutline2 = new Line2D.Double(point8, point4);
+		maze.draw(botOutline2);
+
+		/* inside lines */
+
+		// left mass
+		Line2D.Double leftIn1 = new Line2D.Double(point9, point10);
+		maze.draw(leftIn1);
+
+		Line2D.Double leftIn2 = new Line2D.Double(point11, point10);
+		maze.draw(leftIn2);
+
+		Line2D.Double leftIn3 = new Line2D.Double(point12, point13);
+		maze.draw(leftIn3);
+
+		Line2D.Double leftIn4 = new Line2D.Double(point14, point15);
+		maze.draw(leftIn4);
+
+		Line2D.Double leftIn5 = new Line2D.Double(point15, point16);
+		maze.draw(leftIn5);
+
+		Line2D.Double leftIn6 = new Line2D.Double(point17, point18);
+		maze.draw(leftIn6);
+
+		Line2D.Double leftIn7 = new Line2D.Double(point19, point20);
+		maze.draw(leftIn7);
+
+		// right mass
+		Line2D.Double rightIn1 = new Line2D.Double(point21, point22);
+		maze.draw(rightIn1);
+
+		Line2D.Double rightIn2 = new Line2D.Double(point23, point24);
+		maze.draw(rightIn2);
+
+		Line2D.Double rightIn3 = new Line2D.Double(point25, point24);
+		maze.draw(rightIn3);
+
+		Line2D.Double rightIn4 = new Line2D.Double(point25, point26);
+		maze.draw(rightIn4);
+
+		Line2D.Double rightIn5 = new Line2D.Double(point27, point28);
+		maze.draw(rightIn5);
+
+		Line2D.Double rightIn6 = new Line2D.Double(point29, point30);
+		maze.draw(rightIn6);
+
+		Line2D.Double rightIn7 = new Line2D.Double(point31, point32);
+		maze.draw(rightIn7);
+
+		Line2D.Double rightIn8 = new Line2D.Double(point32, point33);
+		maze.draw(rightIn8);
+
+		Line2D.Double rightIn9 = new Line2D.Double(point33, point34);
+		maze.draw(rightIn9);
+
+		// top mass
+		Line2D.Double topIn1 = new Line2D.Double(point35, point36);
+		maze.draw(topIn1);
+
+		Line2D.Double topIn2 = new Line2D.Double(point37, point38);
+		maze.draw(topIn2);
+
+		Line2D.Double topIn3 = new Line2D.Double(point39, point40);
+		maze.draw(topIn3);
+
+		Line2D.Double topIn4 = new Line2D.Double(point41, point42);
+		maze.draw(topIn4);
+		
+		/* REVERSE OF EVERYTHING */
+
+		/* outline points */
+
+		// rleft
+		Point2D.Double rpoint1 = new Point2D.Double(1500, 100);
+		Point2D.Double rpoint2 = new Point2D.Double(1500, 800);
+
+		// rright
+		Point2D.Double rpoint3 = new Point2D.Double(800, 100);
+		Point2D.Double rpoint4 = new Point2D.Double(800, 800);
+
+		// TOP
+		// rpoint1
+		Point2D.Double rpoint5 = new Point2D.Double(950, 100);
+
+		Point2D.Double rpoint6 = new Point2D.Double(850, 100);
+		// rpoint3
+
+		// BOTTOM
+		// rpoint2
+		Point2D.Double rpoint7 = new Point2D.Double(1400, 800);
+
+		Point2D.Double rpoint8 = new Point2D.Double(1300, 800);
+		// rpoint4
+
+		/* inside rpoints */
+
+		// bottom rleft mass
+		Point2D.Double rpoint9 = new Point2D.Double(1400, 600);
+		Point2D.Double rpoint10 = new Point2D.Double(1400, 700);
+
+		// rpoint10
+		Point2D.Double rpoint11 = new Point2D.Double(900, 700);
+
+		Point2D.Double rpoint12 = new Point2D.Double(1000, 700);
+		Point2D.Double rpoint13 = new Point2D.Double(1000, 600);
+
+		Point2D.Double rpoint14 = new Point2D.Double(1200, 700);
+		Point2D.Double rpoint15 = new Point2D.Double(1200, 500);
+
+		// rpoint15
+		Point2D.Double rpoint16 = new Point2D.Double(1500, 500);
+
+		Point2D.Double rpoint17 = new Point2D.Double(1300, 500);
+		Point2D.Double rpoint18 = new Point2D.Double(1300, 600);
+
+		Point2D.Double rpoint19 = new Point2D.Double(1400, 500);
+		Point2D.Double rpoint20 = new Point2D.Double(1400, 300);
+
+		// rright mass
+		Point2D.Double rpoint21 = new Point2D.Double(800, 200);
+		Point2D.Double rpoint22 = new Point2D.Double(1000, 200);
+
+		Point2D.Double rpoint23 = new Point2D.Double(900, 200);
+		Point2D.Double rpoint24 = new Point2D.Double(900, 300);
+
+		// rpoint24
+		Point2D.Double rpoint25 = new Point2D.Double(1000, 300);
+
+		// rpoint25
+		Point2D.Double rpoint26 = new Point2D.Double(1000, 500);
+
+		Point2D.Double rpoint27 = new Point2D.Double(900, 500);
+		Point2D.Double rpoint28 = new Point2D.Double(1100, 500);
+
+		Point2D.Double rpoint29 = new Point2D.Double(900, 400);
+		Point2D.Double rpoint30 = new Point2D.Double(900, 600);
+
+		Point2D.Double rpoint31 = new Point2D.Double(1100, 600);
+		Point2D.Double rpoint32 = new Point2D.Double(1100, 400);
+
+		// rpoint32
+		Point2D.Double rpoint33 = new Point2D.Double(1200, 400);
+
+		// rpoint33
+		Point2D.Double rpoint34 = new Point2D.Double(1200, 300);
+
+		// rtop mass
+		Point2D.Double rpoint35 = new Point2D.Double(1300, 100);
+		Point2D.Double rpoint36 = new Point2D.Double(1300, 400);
+
+		Point2D.Double rpoint37 = new Point2D.Double(1300, 200);
+		Point2D.Double rpoint38 = new Point2D.Double(1400, 200);
+
+		Point2D.Double rpoint39 = new Point2D.Double(1200, 100);
+		Point2D.Double rpoint40 = new Point2D.Double(1200, 200);
+
+		Point2D.Double rpoint41 = new Point2D.Double(1100, 100);
+		Point2D.Double rpoint42 = new Point2D.Double(1100, 300);
+
+		maze.setColor(Color.BLACK);
+
+		/* outline lines */
+
+		Line2D.Double rleftOutline = new Line2D.Double(rpoint1, rpoint2);
+		maze.draw(rleftOutline);
+
+		Line2D.Double rrightOutline = new Line2D.Double(rpoint3, rpoint4);
+		maze.draw(rrightOutline);
+
+		Line2D.Double rtopOutline1 = new Line2D.Double(rpoint1, rpoint5);
+		maze.draw(rtopOutline1);
+
+		Line2D.Double rtopOutline2 = new Line2D.Double(rpoint6, rpoint3);
+		maze.draw(rtopOutline2);
+
+		Line2D.Double rbotOutline1 = new Line2D.Double(rpoint2, rpoint7);
+		maze.draw(rbotOutline1);
+
+		Line2D.Double rbotOutline2 = new Line2D.Double(rpoint8, rpoint4);
+		maze.draw(rbotOutline2);
+
+		/* inside lines */
+
+		// rleft mass
+		Line2D.Double rleftIn1 = new Line2D.Double(rpoint9, rpoint10);
+		maze.draw(rleftIn1);
+
+		Line2D.Double rleftIn2 = new Line2D.Double(rpoint11, rpoint10);
+		maze.draw(rleftIn2);
+
+		Line2D.Double rleftIn3 = new Line2D.Double(rpoint12, rpoint13);
+		maze.draw(rleftIn3);
+
+		Line2D.Double rleftIn4 = new Line2D.Double(rpoint14, rpoint15);
+		maze.draw(rleftIn4);
+
+		Line2D.Double rleftIn5 = new Line2D.Double(rpoint15, rpoint16);
+		maze.draw(rleftIn5);
+
+		Line2D.Double rleftIn6 = new Line2D.Double(rpoint17, rpoint18);
+		maze.draw(rleftIn6);
+
+		Line2D.Double rleftIn7 = new Line2D.Double(rpoint19, rpoint20);
+		maze.draw(rleftIn7);
+
+		// rright mass
+		Line2D.Double rrightIn1 = new Line2D.Double(rpoint21, rpoint22);
+		maze.draw(rrightIn1);
+
+		Line2D.Double rrightIn2 = new Line2D.Double(rpoint23, rpoint24);
+		maze.draw(rrightIn2);
+
+		Line2D.Double rrightIn3 = new Line2D.Double(rpoint25, rpoint24);
+		maze.draw(rrightIn3);
+
+		Line2D.Double rrightIn4 = new Line2D.Double(rpoint25, rpoint26);
+		maze.draw(rrightIn4);
+
+		Line2D.Double rrightIn5 = new Line2D.Double(rpoint27, rpoint28);
+		maze.draw(rrightIn5);
+
+		Line2D.Double rrightIn6 = new Line2D.Double(rpoint29, rpoint30);
+		maze.draw(rrightIn6);
+
+		Line2D.Double rrightIn7 = new Line2D.Double(rpoint31, rpoint32);
+		maze.draw(rrightIn7);
+
+		Line2D.Double rrightIn8 = new Line2D.Double(rpoint32, rpoint33);
+		maze.draw(rrightIn8);
+
+		Line2D.Double rrightIn9 = new Line2D.Double(rpoint33, rpoint34);
+		maze.draw(rrightIn9);
+
+		// rtop mass
+		Line2D.Double rtopIn1 = new Line2D.Double(rpoint35, rpoint36);
+		maze.draw(rtopIn1);
+
+		Line2D.Double rtopIn2 = new Line2D.Double(rpoint37, rpoint38);
+		maze.draw(rtopIn2);
+
+		Line2D.Double rtopIn3 = new Line2D.Double(rpoint39, rpoint40);
+		maze.draw(rtopIn3);
+
+		Line2D.Double rtopIn4 = new Line2D.Double(rpoint41, rpoint42);
+		maze.draw(rtopIn4);
+	}
+}
