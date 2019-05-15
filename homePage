@@ -1,0 +1,145 @@
+import javafx.scene.control.Button;
+
+import javafx.application.Application;
+import javafx.geometry.Insets;
+import javafx.scene.Group;
+import javafx.scene.Scene;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.scene.layout.GridPane;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.StackPane;
+import javafx.scene.paint.Color;
+import javafx.stage.Stage;
+
+//public class homePage extends JFrame
+//{
+//	public static void main(String[] args)
+//	{
+//		// creating an instance of JFrame
+//			JFrame homepage = new JFrame("SharkBoy and LavaGirl");
+//		// setting the size of the frame
+//			homepage.setSize(500,500);
+//
+//
+//	
+//		//making a panel
+//		JPanel panel = new JPanel();
+//		homepage.add(panel);
+//		// calling user defined method for adding components to this panel
+//		placeComponents(panel);
+//		//allowing the page to show up
+//		homepage.setVisible(true);
+//		
+//		
+//		//making a button to start the game
+//		JButton start = new JButton("Start Game");
+//		start.getFont();
+//		// bounds layouts the size and location on the page  height of the button on the page,length of button,height of the button frame
+//		start.setBounds(830,550, 150, 75);
+//		//adds the button to the front of the homepage
+//		panel.add(start);
+//		// to show up you need to set it to visible
+//		start.setVisible(true);
+//		//setting the color of the button
+//		start.setBackground(Color.magenta);
+//		//start.setFont(arg0);
+//		
+//		//a combo allows you to choose a level instead of creating a new page
+//		
+//		String[] pickLevel = {"Beginner", "Experienced" };
+//	
+//		JComboBox level = new JComboBox(pickLevel);
+//		level.setBounds(830,650,150,75);
+//		panel.add(level);
+//		level.setVisible(true);
+//		level.setBackground(Color.pink);
+//
+//	
+//		
+//	}
+//	
+//	
+//	private static Image getBackground(String string) 
+//	{
+//		return null;
+//	}
+//
+//
+//	private static void placeComponents(JPanel panel) 
+//	{
+//		//panel.setBackground();
+//		panel.setLayout(null);
+//		
+//		
+//	}
+//	
+//	
+//	
+//}
+
+
+
+
+public class homePage extends Application
+{
+
+	
+    public static void main(String[] args)
+    {
+    	
+        Application.launch(args);
+
+    }
+    
+
+    @Override
+    public void start(Stage primaryStage)
+    {
+        primaryStage.setTitle("Adventures of Sharkboy and Lavagirl Maze");
+        Group root = new Group();
+        Scene scene = new Scene(root, 400, 330, Color.WHITE);
+        Button startB = new Button(" Start ");
+        GridPane gridpane = new GridPane(); 
+        StackPane layout = new StackPane();
+        
+        layout.getChildren().add(startB);
+      
+        
+
+        gridpane.setHgap(10);
+        gridpane.setVgap(10);
+        gridpane.add(startB, 4, 1);
+        
+        final ImageView imv = new ImageView();
+        final Image image = new Image(homePage.class.getResourceAsStream("1.jpg"));
+        imv.setImage(image);
+
+        final HBox pictureRegion = new HBox();
+        
+        pictureRegion.getChildren().add(imv);
+        gridpane.add(pictureRegion, 0, 1);
+        
+        
+        root.getChildren().add(gridpane);        
+        primaryStage.setScene(scene);
+        primaryStage.show();
+        
+        layout.getChildren().addAll(imv, startB);
+        
+
+    
+
+
+    }
+
+    
+   
+}
+
+
+
+
+
+
+
