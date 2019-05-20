@@ -497,52 +497,82 @@ public class MovePics extends JPanel implements ActionListener, KeyListener{
      {
              velY = -2.5;
              velX = 0;
+              x +=  velX;
+              x1 += velX1;
+               y += velY;
+               y1 += velY1;
      }
 
      public void up1()
      {
              velY1 = -2.5;
              velX1 = 0;
+             
+              x +=  velX;
+              x1 += velX1;
+               y += velY;
+               y1 += velY1;
      }
 
      public void down()
      {
              velY = 2.5;
              velX = 0;
-                 x +=  velX;
-                 x1 += velX1;
-                 y += velY;
-                 y1 += velY1;
+              x +=  velX;
+              x1 += velX1;
+               y += velY;
+               y1 += velY1;
      }
 
      public void down1()
      {
              velY1 = 2.5;
              velX1 = 0;
+              x +=  velX;
+              x1 += velX1;
+               y += velY;
+               y1 += velY1; 
+ 
      }
 
      public void left()
      {
              velX = -2.5;
              velY = 0;
+              x +=  velX;
+              x1 += velX1;
+               y += velY;
+               y1 += velY1;
      }
 
      public void left1()
      {
              velX1 = -2.5;
              velY1 = 0;
+              x +=  velX;
+              x1 += velX1;
+               y += velY;
+               y1 += velY1;
      }
 
      public void right()
      {
              velX = 2.5;
              velY = 0;
+              x +=  velX;
+              x1 += velX1;
+               y += velY;
+               y1 += velY1;
      }
 
      public void right1()
      {
              velX1 = 2.5;
              velY1 = 0;
+              x +=  velX;
+              x1 += velX1;
+               y += velY;
+               y1 += velY1;
      }
 
      public void keyPressed(KeyEvent e)
