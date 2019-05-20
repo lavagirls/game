@@ -1,0 +1,397 @@
+
+import javax.swing.*;
+
+import java.awt.*;
+import java.awt.event.*;
+import java.awt.geom.*;
+import java.io.File;
+
+
+public class MovePics extends JPanel implements ActionListener, KeyListener{
+
+        Timer t = new Timer(5, this);
+        double x = 0, y = 0, x1 = 0, y1 = 0, velX = 0, velY = 0, velX1 = 0, velY1 = 0;
+
+        public MovePics()
+        {
+                t.start();
+                addKeyListener(this);
+                setFocusable(true);
+                setFocusTraversalKeysEnabled(false);
+
+
+
+        }
+
+
+
+        public void paintComponent(Graphics g)
+        {
+                super.paintComponent(g);
+                g.setColor(Color.BLUE);
+                Graphics2D g2 = (Graphics2D) g;
+                g2.fill(new Ellipse2D.Double(x,y,40,40));
+                g.setColor(Color.RED);
+                Graphics2D g3 = (Graphics2D) g;
+                g3.fill(new Ellipse2D.Double(x1,y1,40,40));
+
+                Graphics2D maze = (Graphics2D) g;
+
+                //left maze outline 
+                Point2D.Double point1 = new Point2D.Double(200, 200);
+                Point2D.Double point2 = new Point2D.Double(200, 800);
+
+                //enter
+                Point2D.Double point3 = new Point2D.Double(200, 800);
+                Point2D.Double point4 = new Point2D.Double(600,800);
+
+                //right enter
+                Point2D.Double point5 = new Point2D.Double(700, 800);
+                Point2D.Double point6 = new Point2D.Double(800,800);
+
+                //right down
+                Point2D.Double point7 = new Point2D.Double(800, 200);
+                Point2D.Double point8 = new Point2D.Double(800,800);
+
+                //exit
+                Point2D.Double point9 = new Point2D.Double(200, 200);
+                Point2D.Double point10 = new Point2D.Double(650,200);
+
+                //right exit
+                Point2D.Double point11 = new Point2D.Double(750, 200);
+                Point2D.Double point12 = new Point2D.Double(800,200);
+
+
+
+
+                // inside maze 
+                Point2D.Double point13 = new Point2D.Double(250, 300);
+                Point2D.Double point14 = new Point2D.Double(600,300);
+
+                Point2D.Double point15 = new Point2D.Double(450, 250);
+                Point2D.Double point16 = new Point2D.Double(450,300);
+//              
+                Point2D.Double point17 = new Point2D.Double(250, 450);
+                Point2D.Double point18 = new Point2D.Double(200,450);
+
+                Point2D.Double point19 = new Point2D.Double(250, 350);
+                Point2D.Double point20 = new Point2D.Double(250,550);
+//
+                Point2D.Double point21 = new Point2D.Double(450, 800);
+                Point2D.Double point22 = new Point2D.Double(450,750);
+
+                Point2D.Double point23 = new Point2D.Double(400, 750);
+                Point2D.Double point24 = new Point2D.Double(550,750);
+
+//              
+                Point2D.Double point25 = new Point2D.Double(750, 200);
+                Point2D.Double point26 = new Point2D.Double(750, 375);
+
+                Point2D.Double point27 = new Point2D.Double(750, 375);
+                Point2D.Double point28 = new Point2D.Double(375, 375);
+
+//              
+                Point2D.Double point29 = new Point2D.Double(375, 375);
+                Point2D.Double point30 = new Point2D.Double(375, 500);
+
+                //Point2D.Double point31 = new Point2D.Double(350, 500);
+                //Point2D.Double point32 = new Point2D.Double(425, 500);
+
+//      
+                Point2D.Double point33 = new Point2D.Double(425, 500);
+                Point2D.Double point34 = new Point2D.Double(425, 425);
+
+                Point2D.Double point35 = new Point2D.Double(425, 425);
+                Point2D.Double point36 = new Point2D.Double(750, 425);
+
+                Point2D.Double point37 = new Point2D.Double(750, 425);
+                Point2D.Double point38 = new Point2D.Double(750, 600);
+//              
+                Point2D.Double point39 = new Point2D.Double(800, 600);
+                Point2D.Double point40 = new Point2D.Double(650, 600);
+
+                Point2D.Double point41 = new Point2D.Double(650, 600);
+                Point2D.Double point42 = new Point2D.Double(650, 650);
+
+                //Point2D.Double point43 = new Point2D.Double(650, 650);
+                //Point2D.Double point44 = new Point2D.Double(775, 650);
+//
+                Point2D.Double point45 = new Point2D.Double(700, 700);
+                Point2D.Double point46 = new Point2D.Double(700, 800);
+
+                Point2D.Double point47 = new Point2D.Double(700, 700);
+                Point2D.Double point48 = new Point2D.Double(300, 700);
+//              
+
+                Point2D.Double point49 = new Point2D.Double(200, 600);
+                Point2D.Double point50 = new Point2D.Double(550, 600);
+
+                //new line
+                Point2D.Double point51 = new Point2D.Double(700, 500);
+                Point2D.Double point52 = new Point2D.Double(500, 500);
+
+                Point2D.Double point53 = new Point2D.Double(600, 450);
+                Point2D.Double point54 = new Point2D.Double(600, 500);
+
+
+                maze.setColor(Color.BLACK);
+
+                //left outline
+                Line2D.Double line1 = new Line2D.Double(point1, point2);
+                maze.draw(line1);
+
+                Line2D.Double line2 = new Line2D.Double(point3, point4);
+                maze.draw(line2);
+
+                Line2D.Double line3 = new Line2D.Double(point5, point6);
+                maze.draw(line3);
+
+                Line2D.Double line4 = new Line2D.Double(point7, point8);
+                maze.draw(line4);
+
+                Line2D.Double line5 = new Line2D.Double(point9, point10);
+                maze.draw(line5);
+
+                Line2D.Double line6 = new Line2D.Double(point11, point12);
+                maze.draw(line6);
+
+                //inside
+                Line2D.Double line7 = new Line2D.Double(point13, point14);
+                maze.draw(line7);
+
+                Line2D.Double line8 = new Line2D.Double(point15, point16);
+                maze.draw(line8);
+
+                Line2D.Double line9 = new Line2D.Double(point17, point18);
+                maze.draw(line9);
+
+                Line2D.Double line10 = new Line2D.Double(point19, point20);
+                maze.draw(line10);
+
+                Line2D.Double line11 = new Line2D.Double(point21, point22);
+                maze.draw(line11);
+
+                Line2D.Double line12= new Line2D.Double(point23, point24);
+                maze.draw(line12);      
+
+                Line2D.Double line13 = new Line2D.Double(point25, point26);
+                maze.draw(line13);
+
+                Line2D.Double line14= new Line2D.Double(point27, point28);
+                maze.draw(line14);
+
+                Line2D.Double line15 = new Line2D.Double(point29, point30);
+                maze.draw(line15);
+
+                //Line2D.Double line16= new Line2D.Double(point31, point32);
+                //maze.draw(line16);
+
+                Line2D.Double line17 = new Line2D.Double(point33, point34);
+                maze.draw(line17);
+
+                Line2D.Double line18= new Line2D.Double(point35, point36);
+                maze.draw(line18);
+
+                Line2D.Double line19 = new Line2D.Double(point37, point38);
+                maze.draw(line19);
+
+                Line2D.Double line20= new Line2D.Double(point39, point40);
+                maze.draw(line20);
+
+                Line2D.Double line21= new Line2D.Double(point41, point42);
+                maze.draw(line21);
+
+                //Line2D.Double line22 = new Line2D.Double(point43, point44);
+                //maze.draw(line22);
+
+                Line2D.Double line23= new Line2D.Double(point45, point46);
+                maze.draw(line23);
+
+                Line2D.Double line24 = new Line2D.Double(point47, point48);
+                maze.draw(line24);
+
+                Line2D.Double line25= new Line2D.Double(point49, point50);
+                maze.draw(line25);
+
+                //new line
+                Line2D.Double line26= new Line2D.Double(point51, point52);
+                maze.draw(line26);
+
+                Line2D.Double line27= new Line2D.Double(point53, point54);
+                maze.draw(line27);
+        }
+
+        @Override
+        public void actionPerformed(ActionEvent e) 
+        {
+            // Set the new x and y coordinates, depending on which direction we have moved
+                x +=  velX;
+                x1 += velX1;
+                y += velY;
+                y1 += velY1;
+
+
+            if(x >= 710)
+                x = 710;
+            else if(x >= 600 && x <= 710 && y <= 350)
+            {
+                if(y >= 335)
+                        y = 335;
+            }
+            else if(x >= 350 && x <= 600 && y >= 295 && y <= 350)
+            {
+                if(y >= 335)
+                        y = 335;
+                if(y <= 300)
+                        y = 300;
+
+            }
+            else if(x >= 245 && x <= 350 && y >= 295 && y <= 600)
+            {
+                if(y <= 300)
+                        y = 300;
+                if(y >= 560)
+                        y = 560;
+
+            }
+            else if(x > 250 && x <= 350 && y >= 350 && y <= 500)
+            {
+                if(x >= 350)
+                        x = 350;
+            }
+            else if(x >= 200 && x <= 249 && y <= 545 && y >= 350)
+            {
+                if(x >= 210)
+                        x = 210;
+            }
+            else if(x >= 200 && x <= 249 && y <= 600 && y >= 445)
+            {
+                if(y <= 450)
+                        y = 450;
+                if(y >= 560)
+                        y = 560;
+            }
+            else if(x >= 200 && x <= 249 && y <= 444 && y >= 350)
+            {
+                if(y >= 410)
+                        y = 410;
+            }
+
+                if (x < 200) {
+                x = 200;
+            }
+            else if (y < 200) {
+                y = 200;
+            }
+            else if(x >= 800)
+            {
+                x = 800;
+            }
+            else if(y >= 650)
+            {
+                y = 650;
+            }
+
+
+
+
+            if (x1 < 200) {
+                x1 = 200;
+            }
+
+
+            if (y1 < 200) {
+                y1 = 200;
+            }
+
+            if(x1 >= 800)
+            {
+                x1 = 800;
+            }
+
+            if(y1 >= 650)
+            {
+                y1 = 650;
+            }
+
+
+            // Redraw the square when something happens
+            repaint();
+        }
+
+        public void up()
+        {
+                velY = -2.5;
+                velX = 0;
+        }
+
+        public void up1()
+        {
+                velY1 = -2.5;
+                velX1 = 0;
+        }
+
+        public void down()
+        {
+                velY = 2.5;
+                velX = 0;
+        }
+
+        public void down1()
+        {
+                velY1 = 2.5;
+                velX1 = 0;
+        }
+
+        public void left()
+        {
+                velX = -2.5;
+                velY = 0;
+        }
+
+        public void left1()
+        {
+                velX1 = -2.5;
+                velY1 = 0;
+        }
+
+        public void right()
+        {
+                velX = 2.5;
+                velY = 0;
+        }
+
+        public void right1()
+        {
+                velX1 = 2.5;
+                velY1 = 0;
+        }
+
+        public void keyPressed(KeyEvent e)
+        {
+                int code = e.getKeyCode();
+                int code1 = e.getKeyCode();
+                if(code == KeyEvent.VK_UP)
+                        up();
+                if(code == KeyEvent.VK_DOWN)
+                        down();
+                if(code == KeyEvent.VK_RIGHT)
+                        right();
+                if(code == KeyEvent.VK_LEFT)
+                        left();
+                if(code1 == KeyEvent.VK_W)
+                        up1();
+                if(code1 == KeyEvent.VK_S)
+                        down1();
+                if(code1 == KeyEvent.VK_D)
+                        right1();
+                if(code1 == KeyEvent.VK_A)
+                        left1();
+
+
+        }
+
+        public void keyTyped(KeyEvent e) {}
+        public void keyReleased(KeyEvent e) {}
+
+}
